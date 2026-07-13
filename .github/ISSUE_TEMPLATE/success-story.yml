@@ -61,25 +61,16 @@ body:
       label: Your Story
       description: |
         Write your story in Markdown.
-
-        Use headings if you'd like.
-
-        Example:
-
-        ## Challenge
-
-        ...
-
-        ## Solution
-
-        ...
-
-        ## Results
-
-        ...
       render: markdown
     validations:
       required: true
+      placeholder: | 
+        you can use heading 
+        ```
+        ## Solution
+        ## Challenges
+        ## Result
+        ```
 
   - type: textarea
     id: industries
