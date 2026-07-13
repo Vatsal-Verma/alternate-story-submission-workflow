@@ -55,22 +55,27 @@ body:
       label: Tag Line
       placeholder: One sentence describing your story.
 
-  - type: textarea
-    id: story
-    attributes:
-      label: Your Story
-      description: |
-        Write your story in Markdown.
-      render: markdown
-    validations:
-      required: true
-      placeholder: | 
-        you can use heading 
-        ```
-        ## Solution
-        ## Challenges
-        ## Result
-        ```
+- type: textarea
+  id: story
+  attributes:
+    label: Your Story
+    description: |
+      Write your story in Markdown.
+    render: markdown
+    placeholder: |
+      ## Background
+      Tell us about your organization and why you chose Jenkins.
+
+      ## Solution
+      Explain how you use Jenkins, your setup, or the workflows you built.
+
+      ## Challenges
+      Describe any challenges you faced and how Jenkins helped solve them.
+
+      ## Results
+      Share the impact, improvements, or lessons learned.
+  validations:
+    required: true
 
   - type: textarea
     id: industries
