@@ -8,10 +8,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for sharing your Jenkins success story! Please complete the form below.
+        Thank you for sharing your Jenkins success story!
+
+        Please complete the form below. Fields marked with * are required.
 
   - type: input
-    id: title
+    id: story_title
     attributes:
       label: Story Title
       placeholder: Jenkins transformed our CI/CD pipeline
@@ -33,7 +35,25 @@ body:
       placeholder: https://example.com
 
   - type: input
-    id: author
+    id: project_website
+    attributes:
+      label: Project Website (optional)
+      placeholder: https://project.example.com
+
+  - type: input
+    id: project_funding
+    attributes:
+      label: Project Funding (optional)
+      placeholder: Self-funded, Government Grant, Enterprise, etc.
+
+  - type: input
+    id: funded_by
+    attributes:
+      label: Funded By (optional)
+      placeholder: Linux Foundation
+
+  - type: input
+    id: author_name
     attributes:
       label: Author Name
       placeholder: Jane Doe
@@ -41,7 +61,7 @@ body:
       required: true
 
   - type: input
-    id: location
+    id: organization_location
     attributes:
       label: Organization Location
       description: City, State/Province, Country
@@ -50,13 +70,21 @@ body:
       required: true
 
   - type: textarea
-    id: tagline
+    id: tag_line
     attributes:
       label: Tag Line
       placeholder: One sentence describing your story.
 
   - type: textarea
-    id: story
+    id: summary
+    attributes:
+      label: Summary
+      description: A short summary (2–4 sentences) that will appear in story previews.
+      placeholder: |
+        Briefly describe your Jenkins journey and the impact it had on your organization.
+
+  - type: textarea
+    id: your_story
     attributes:
       label: Your Story
       description: |
@@ -128,7 +156,17 @@ body:
         Gradle
 
   - type: textarea
-    id: community_supports
+    id: plugins
+    attributes:
+      label: Jenkins Plugins
+      description: One plugin per line.
+      placeholder: |
+        Pipeline
+        Git
+        Blue Ocean
+
+  - type: textarea
+    id: community_support
     attributes:
       label: Community Support
       description: One per line.
@@ -137,27 +175,63 @@ body:
         Jenkins Blog
         Community Forum
 
+  - type: textarea
+    id: teams
+    attributes:
+      label: Teams
+      description: Teams involved in the project (one per line).
+      placeholder: |
+        DevOps
+        Platform Engineering
+
+  - type: textarea
+    id: team_members
+    attributes:
+      label: Team Members
+      description: One per line.
+      placeholder: |
+        Jane Doe
+        John Smith
+
   - type: input
-    id: quote_from
+    id: image
+    attributes:
+      label: Story Image Filename (optional)
+      description: Enter the filename after uploading it to the issue.
+      placeholder: hero.png
+
+  - type: input
+    id: quote_author
     attributes:
       label: Quote Author
+      placeholder: Jane Doe, DevOps Lead
 
   - type: textarea
     id: quote
     attributes:
       label: Quote
+      placeholder: Jenkins has transformed the way we deliver software.
+
+  - type: input
+    id: quote_image
+    attributes:
+      label: Quote Image Filename (optional)
+      description: Enter the uploaded filename.
+      placeholder: jane-doe.jpg
 
   - type: markdown
     attributes:
       value: |
         ## Images
 
-        After submitting this issue, drag and drop:
+        After submitting this issue, drag and drop any images into the issue description or a comment.
 
-        - Story image
-        - Quote image (optional)
+        Suggested images:
 
-        into the issue description or a comment.
+        - Story hero image
+        - Quote author image (optional)
+
+        Once uploaded, copy the filenames into the fields above.
 
   - type: checkboxes
     id: consent
