@@ -196,12 +196,14 @@ body:
         Jane Doe
         John Smith
 
-  - type: input
+  - type: textarea
     id: image
     attributes:
-      label: Story Image Filename
-      description: Optional. Enter the uploaded filename after attaching the image to the issue.
-      placeholder: hero.png
+      label: Story Image
+      description: |
+        Drag & drop or paste an image here.
+
+        GitHub will upload it automatically.
 
   - type: input
     id: quote_author
@@ -215,12 +217,11 @@ body:
       label: Quote
       placeholder: Jenkins has transformed the way we deliver software.
 
-  - type: input
+  - type: textarea
     id: quote_image
     attributes:
       label: Quote Image Filename
       description: Optional. Enter the uploaded filename after attaching the image to the issue.
-      placeholder: jane-doe.jpg
 
   - type: markdown
     attributes:
