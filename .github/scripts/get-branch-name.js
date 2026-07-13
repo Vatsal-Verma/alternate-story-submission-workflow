@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import process from "node:process";
 
 const event = JSON.parse(
   fs.readFileSync(process.env.GITHUB_EVENT_PATH, "utf8"),

@@ -55,4 +55,4 @@ body_content:
 quotes:
   - from: Jammie lannister, Brother
     content: Jenkins has transformed our way of thinking to next level and we really admire that, thank you !
-    image: quote.webp
+    image: ./quote.png

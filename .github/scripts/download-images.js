@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { Buffer } from "node:buffer";
 
 function extractImageUrl(value) {
   if (!value || typeof value !== "string") return null;
