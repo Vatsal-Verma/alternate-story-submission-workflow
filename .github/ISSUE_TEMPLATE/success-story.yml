@@ -1,6 +1,6 @@
 name: Submit a Success Story
 description: Share how your organization uses Jenkins.
-title: "[Story]: "
+title: "Story Submission: "
 labels:
   - story-submission
 
@@ -55,27 +55,31 @@ body:
       label: Tag Line
       placeholder: One sentence describing your story.
 
-- type: textarea
-  id: story
-  attributes:
-    label: Your Story
-    description: |
-      Write your story in Markdown.
-    render: markdown
-    placeholder: |
-      ## Background
-      Tell us about your organization and why you chose Jenkins.
+  - type: textarea
+    id: story
+    attributes:
+      label: Your Story
+      description: |
+        Write your story in Markdown.
+      render: markdown
+      placeholder: |
+        ## Background
 
-      ## Solution
-      Explain how you use Jenkins, your setup, or the workflows you built.
+        Tell us about your organization and why you chose Jenkins.
 
-      ## Challenges
-      Describe any challenges you faced and how Jenkins helped solve them.
+        ## Solution
 
-      ## Results
-      Share the impact, improvements, or lessons learned.
-  validations:
-    required: true
+        Explain how you use Jenkins, your setup, or the workflows you built.
+
+        ## Challenges
+
+        Describe any challenges you faced and how Jenkins helped solve them.
+
+        ## Results
+
+        Share the impact, improvements, or lessons learned.
+    validations:
+      required: true
 
   - type: textarea
     id: industries
@@ -129,7 +133,9 @@ body:
       label: Community Support
       description: One per line.
       placeholder: |
-        Yes
+        Jenkins Community
+        Jenkins Blog
+        Community Forum
 
   - type: input
     id: quote_from
