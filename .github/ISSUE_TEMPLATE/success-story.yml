@@ -13,7 +13,7 @@ body:
         Please complete the form below. Fields marked with * are required.
 
   - type: input
-    id: title
+    id: story_title
     attributes:
       label: Story Title
       placeholder: Jenkins transformed our CI/CD pipeline
@@ -37,19 +37,22 @@ body:
   - type: input
     id: project_website
     attributes:
-      label: Project Website (optional)
+      label: Project Website
+      description: Optional. Provide the project website if applicable.
       placeholder: https://project.example.com
 
   - type: input
     id: project_funding
     attributes:
-      label: Project Funding (optional)
+      label: Project Funding
+      description: Optional. Describe how the project is funded.
       placeholder: Self-funded, Government Grant, Enterprise, etc.
 
   - type: input
     id: funded_by
     attributes:
-      label: Funded By (optional)
+      label: Funded By
+      description: Optional. Name the funding organization if applicable.
       placeholder: Linux Foundation
 
   - type: input
@@ -79,7 +82,7 @@ body:
     id: summary
     attributes:
       label: Summary
-      description: A short summary (2–4 sentences) that will appear in story previews.
+      description: Optional. A short summary (2–4 sentences) that will appear in story previews.
       placeholder: |
         Briefly describe your Jenkins journey and the impact it had on your organization.
 
@@ -179,7 +182,7 @@ body:
     id: teams
     attributes:
       label: Teams
-      description: Teams involved in the project (one per line).
+      description: Optional. Teams involved in the project (one per line).
       placeholder: |
         DevOps
         Platform Engineering
@@ -188,7 +191,7 @@ body:
     id: team_members
     attributes:
       label: Team Members
-      description: One per line.
+      description: Optional. One per line.
       placeholder: |
         Jane Doe
         John Smith
@@ -196,8 +199,8 @@ body:
   - type: input
     id: image
     attributes:
-      label: Story Image Filename (optional)
-      description: Enter the filename after uploading it to the issue.
+      label: Story Image Filename
+      description: Optional. Enter the uploaded filename after attaching the image to the issue.
       placeholder: hero.png
 
   - type: input
@@ -215,8 +218,8 @@ body:
   - type: input
     id: quote_image
     attributes:
-      label: Quote Image Filename (optional)
-      description: Enter the uploaded filename.
+      label: Quote Image Filename
+      description: Optional. Enter the uploaded filename after attaching the image to the issue.
       placeholder: jane-doe.jpg
 
   - type: markdown
@@ -231,7 +234,7 @@ body:
         - Story hero image
         - Quote author image (optional)
 
-        Once uploaded, copy the filenames into the fields above.
+        Once uploaded, copy the filenames into the corresponding fields above.
 
   - type: checkboxes
     id: consent
