@@ -13,7 +13,7 @@ body:
         Please complete the form below. Fields marked with * are required.
 
   - type: input
-    id: story_title
+    id: title
     attributes:
       label: Story Title
       placeholder: Jenkins transformed our CI/CD pipeline
