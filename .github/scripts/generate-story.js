@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import * as yaml from "js-yaml";
+import { downloadImages } from "./download-images.js";
 
 const raw = JSON.parse(
   fs.readFileSync(".story-submission/parsed.json", "utf8"),
@@ -25,7 +26,6 @@ const form = {
   author: norm(raw.author_name),
   location: norm(raw.organization_location),
   tag_line: norm(raw.tag_line),
-  image: norm(raw.image),
   summary: norm(raw.summary),
   story: norm(raw.your_story)
     .replace(/^```markdown\s*/i, "")
@@ -43,7 +43,6 @@ const form = {
   team_members: norm(raw.team_members),
   quote: norm(raw.quote),
   quote_from: norm(raw.quote_author),
-  quote_image: norm(raw.quote_image),
 };
 
 function array(id) {
@@ -75,7 +74,7 @@ function clean(obj) {
       !Array.isArray(value) &&
       Object.keys(value).length === 0
     ) {
-      continue; 
+      continue;
     }
     result[key] = value;
   }
@@ -85,6 +84,8 @@ function clean(obj) {
 const slug = slugify(form.title);
 const storyDir = `src/user-story/${slug}`;
 fs.mkdirSync(storyDir, { recursive: true });
+
+const images = await downloadImages(raw, storyDir);
 
 const paragraphs = form.story
   .split(/\n\s*\n/)
@@ -97,7 +98,7 @@ const story = clean({
   date: new Date().toISOString(),
   authored_by: form.author,
   tag_line: form.tag_line,
-  image: form.image,
+  image: images.story,
 
   metadata: clean({
     title: form.title,
@@ -135,7 +136,7 @@ const story = clean({
         clean({
           from: form.quote_from,
           content: form.quote,
-          image: form.quote_image,
+          image: images.quote,
         }),
       ]
     : [],

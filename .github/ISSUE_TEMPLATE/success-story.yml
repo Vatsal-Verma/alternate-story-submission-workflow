@@ -220,7 +220,7 @@ body:
   - type: textarea
     id: quote_image
     attributes:
-      label: Quote Image Filename
+      label: Quote Image
       description: Optional. Enter the uploaded filename after attaching the image to the issue.
 
   - type: markdown
