@@ -1,0 +1,141 @@
+.story-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: var(--color-nav-bg);
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+}
+
+.story-link {
+  color: var(--color-nav-text);
+  text-decoration: none;
+}
+
+.next-link {
+  margin-left: auto;
+}
+
+.story-container {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-family: system-ui, sans-serif;
+}
+
+.story-header {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.story-title {
+  margin: 100 0 12px;
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
+.story-tagline {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: var(--color-text-tertiary);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.story-author {
+  margin: 15px 0 0;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.metadata-title-box {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: var(--color-surface);
+  border-radius: 14px;
+}
+
+.story-content {
+  margin-bottom: 32px;
+}
+
+.story-content-title {
+  margin-bottom: 16px;
+}
+
+.story-paragraph {
+  margin-bottom: 18px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .story-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .story-link {
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+
+  .next-link {
+    justify-self: end;
+    text-align: right;
+  }
+}
+
+.metadata-with-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--color-surface-block);
+  border-radius: 10px;
+}
+
+.story-image-wrapper {
+  flex-shrink: 0;
+}
+
+.story-image {
+  display: block;
+  border-radius: 12px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.metadata-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.metadata-row {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .metadata-with-image {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .story-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .story-image-wrapper {
+    width: 100%;
+  }
+}

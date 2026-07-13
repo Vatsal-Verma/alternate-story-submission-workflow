@@ -1,0 +1,166 @@
+name: Submit a Success Story
+description: Share how your organization uses Jenkins.
+title: "[Story]: "
+labels:
+  - story-submission
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing your Jenkins success story! Please complete the form below.
+
+  - type: input
+    id: title
+    attributes:
+      label: Story Title
+      placeholder: Jenkins transformed our CI/CD pipeline
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      placeholder: Acme Corporation
+    validations:
+      required: true
+
+  - type: input
+    id: company_website
+    attributes:
+      label: Company Website
+      placeholder: https://example.com
+
+  - type: input
+    id: author
+    attributes:
+      label: Author Name
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Organization Location
+      description: City, State/Province, Country
+      placeholder: Bengaluru, Karnataka, India
+    validations:
+      required: true
+
+  - type: textarea
+    id: tagline
+    attributes:
+      label: Tag Line
+      placeholder: One sentence describing your story.
+
+  - type: textarea
+    id: story
+    attributes:
+      label: Your Story
+      description: |
+        Write your story in Markdown.
+
+        Use headings if you'd like.
+
+        Example:
+
+        ## Challenge
+
+        ...
+
+        ## Solution
+
+        ...
+
+        ## Results
+
+        ...
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: industries
+    attributes:
+      label: Industries
+      description: One per line.
+      placeholder: |
+        DevOps
+        Cloud
+
+  - type: textarea
+    id: programming_languages
+    attributes:
+      label: Programming Languages
+      description: One per line.
+      placeholder: |
+        Java
+        Groovy
+
+  - type: textarea
+    id: platforms
+    attributes:
+      label: Platforms
+      description: One per line.
+      placeholder: |
+        Linux
+        Docker
+        Kubernetes
+
+  - type: textarea
+    id: version_control_systems
+    attributes:
+      label: Version Control Systems
+      description: One per line.
+      placeholder: |
+        GitHub
+        GitLab
+
+  - type: textarea
+    id: build_tools
+    attributes:
+      label: Build Tools
+      description: One per line.
+      placeholder: |
+        Maven
+        Gradle
+
+  - type: textarea
+    id: community_supports
+    attributes:
+      label: Community Support
+      description: One per line.
+      placeholder: |
+        Yes
+
+  - type: input
+    id: quote_from
+    attributes:
+      label: Quote Author
+
+  - type: textarea
+    id: quote
+    attributes:
+      label: Quote
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Images
+
+        After submitting this issue, drag and drop:
+
+        - Story image
+        - Quote image (optional)
+
+        into the issue description or a comment.
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I confirm this story may be published on stories.jenkins.io.
+          required: true
