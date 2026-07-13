@@ -100,7 +100,7 @@ jobs:
             PR_URL=$(gh pr view "$BRANCH" --json url -q .url)
           else
             gh pr create \
-              --title "Add story: ${ISSUE_TITLE}" \
+              --title "${ISSUE_TITLE}" \
               --body "Automatically generated from issue #${ISSUE_NUMBER}" \
               --head "$BRANCH" \
               --base main
