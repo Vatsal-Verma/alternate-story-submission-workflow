@@ -73,7 +73,7 @@ jobs:
         run: |
           ISSUE_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
 
-          git add stories/
+          git add src/user-story/
 
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
