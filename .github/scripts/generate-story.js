@@ -5,59 +5,54 @@ const raw = JSON.parse(
   fs.readFileSync(".story-submission/parsed.json", "utf8"),
 );
 
+function norm(value) {
+  if (value === null || value === undefined) return "";
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (trimmed === "" || trimmed === "_No response_") return "";
+    return trimmed;
+  }
+  return value;
+}
+
 const form = {
-  title: raw.story_title,
-  organization: raw.organization,
-  company_website: raw.company_website,
-  project_website: raw.project_website || "",
-  project_funding: raw.project_funding || "",
-  funded_by: raw.funded_by || "",
-  author: raw.author_name,
-  location: raw.organization_location,
-  tag_line: raw.tag_line || "",
-  image: raw.image || "",
-  summary: raw.summary || "",
-  story: (raw.your_story || "")
+  title: norm(raw.story_title),
+  organization: norm(raw.organization),
+  company_website: norm(raw.company_website),
+  project_website: norm(raw.project_website),
+  project_funding: norm(raw.project_funding),
+  funded_by: norm(raw.funded_by),
+  author: norm(raw.author_name),
+  location: norm(raw.organization_location),
+  tag_line: norm(raw.tag_line),
+  image: norm(raw.image),
+  summary: norm(raw.summary),
+  story: norm(raw.your_story)
     .replace(/^```markdown\s*/i, "")
     .replace(/^```\s*/i, "")
     .replace(/\s*```$/i, "")
     .trim(),
-  industries: raw.industries || "",
-  programming_languages: raw.programming_languages || "",
-  platforms: raw.platforms || "",
-  version_control_systems: raw.version_control_systems || "",
-  build_tools: raw.build_tools || "",
-  plugins: raw.plugins || "",
-  community_supports: raw.community_support || "",
-  teams: raw.teams || "",
-  team_members: raw.team_members || "",
-  quote: raw.quote || "",
-  quote_from: raw.quote_author || "",
-  quote_image: raw.quote_image || "",
+  industries: norm(raw.industries),
+  programming_languages: norm(raw.programming_languages),
+  platforms: norm(raw.platforms),
+  version_control_systems: norm(raw.version_control_systems),
+  build_tools: norm(raw.build_tools),
+  plugins: norm(raw.plugins),
+  community_supports: norm(raw.community_support),
+  teams: norm(raw.teams),
+  team_members: norm(raw.team_members),
+  quote: norm(raw.quote),
+  quote_from: norm(raw.quote_author),
+  quote_image: norm(raw.quote_image),
 };
-
-if (!form.title) {
-  throw new Error("Missing required field: story_title");
-}
-
-if (!form.author) {
-  throw new Error("Missing required field: author_name");
-}
-
-if (!form.story) {
-  throw new Error("Missing required field: your_story");
-}
 
 function array(id) {
   const value = form[id];
-
   if (!value) return [];
-
   if (Array.isArray(value)) return value;
-
   return value
     .split("\n")
-    .map((v) => v.trim())
+    .map((v) => norm(v))
     .filter(Boolean);
 }
 
@@ -70,115 +65,91 @@ function slugify(text) {
     .replace(/-+/g, "-");
 }
 
+function clean(obj) {
+  const result = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (value === "" || value === null || value === undefined) continue;
+    if (Array.isArray(value) && value.length === 0) continue;
+    if (
+      typeof value === "object" &&
+      !Array.isArray(value) &&
+      Object.keys(value).length === 0
+    ) {
+      continue; 
+    }
+    result[key] = value;
+  }
+  return result;
+}
+
 const slug = slugify(form.title);
-
 const storyDir = `src/user-story/${slug}`;
-
-fs.mkdirSync(storyDir, {
-  recursive: true,
-});
+fs.mkdirSync(storyDir, { recursive: true });
 
 const paragraphs = form.story
   .split(/\n\s*\n/)
   .map((p) => p.trim())
   .filter(Boolean);
 
-const story = {
+const story = clean({
   title: form.title,
-
   post_name: slug,
-
   date: new Date().toISOString(),
-
   authored_by: form.author,
-
   tag_line: form.tag_line,
-
   image: form.image,
 
-  metadata: {
+  metadata: clean({
     title: form.title,
-
     organization: form.organization,
-
     company_website: form.company_website,
-
     project_website: form.project_website,
-
     project_funding: form.project_funding,
-
     funded_by: form.funded_by,
-
     summary: form.summary,
-
     teams: array("teams"),
-
     team_members: array("team_members"),
-
     industries: array("industries"),
-
     programming_languages: array("programming_languages"),
-
     platforms: array("platforms"),
-
     version_control_systems: array("version_control_systems"),
-
     build_tools: array("build_tools"),
-
     plugins: array("plugins"),
-
     community_supports: array("community_supports"),
-  },
+  }),
 
-  map: {
+  map: clean({
     authored_by: form.author,
-
     location: form.location,
-
     industries: array("industries"),
-
     geojson: "",
-  },
+  }),
 
   body_content: {
     title: form.title,
-
     paragraphs,
   },
 
   quotes: form.quote
     ? [
-        {
+        clean({
           from: form.quote_from,
           content: form.quote,
           image: form.quote_image,
-        },
+        }),
       ]
     : [],
-};
-
-fs.writeFileSync(
-  `${storyDir}/index.yaml`,
-  yaml.dump(story, {
-    lineWidth: -1,
-    noRefs: true,
-  }),
-);
-
-fs.mkdirSync(".story-submission", {
-  recursive: true,
 });
 
 fs.writeFileSync(
+  `${storyDir}/index.yaml`,
+  yaml.dump(story, { lineWidth: -1, noRefs: true }),
+);
+
+fs.mkdirSync(".story-submission", { recursive: true });
+fs.writeFileSync(
   ".story-submission/output.json",
-  JSON.stringify(
-    {
-      slug,
-      path: `${storyDir}/index.yaml`,
-    },
-    null,
-    2,
-  ),
+  JSON.stringify({ slug, path: `${storyDir}/index.yaml` }, null, 2),
 );
 
 console.log(`Generated ${storyDir}/index.yaml`);
