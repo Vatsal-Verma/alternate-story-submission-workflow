@@ -37,7 +37,7 @@ const form = {
   platforms: norm(raw.platforms),
   version_control_systems: norm(raw.version_control_systems),
   build_tools: norm(raw.build_tools),
-  plugins: norm(raw.plugins),
+  plugins: norm(raw.jenkins_plugins),
   community_supports: norm(raw.community_support),
   teams: norm(raw.teams),
   team_members: norm(raw.team_members),

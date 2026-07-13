@@ -85,7 +85,7 @@ export async function downloadImages(raw, storyDir) {
   const images = {};
 
   images.story = await downloadImage(
-    raw.image,
+    raw.story_image,
     storyDir,
     "story",
   );
