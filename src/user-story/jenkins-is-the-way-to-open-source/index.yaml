@@ -1,0 +1,58 @@
+title: Jenkins is the way to open source
+post_name: jenkins-is-the-way-to-open-source
+date: '2026-07-13T19:14:49.806Z'
+authored_by: Cersie lannister
+tag_line: Jenkins is one the greatest way to build, test and deploy your workflow
+image: story.png
+metadata:
+  title: Jenkins is the way to open source
+  organization: Winterfell
+  industries:
+    - Devops
+    - cloud
+    - software
+  programming_languages:
+    - java
+    - cpp
+    - python
+    - ruby
+  platforms:
+    - jenkins
+    - docker
+    - teraform
+    - aws
+  version_control_systems:
+    - github
+    - gitlab
+    - gitty
+  build_tools:
+    - maven
+    - gradle
+  plugins:
+    - junit
+    - pipeline graph view
+  community_supports:
+    - jenkins community and blogs
+map:
+  authored_by: Cersie lannister
+  location: India
+  industries:
+    - Devops
+    - cloud
+    - software
+body_content:
+  title: Jenkins is the way to open source
+  paragraphs:
+    - |-
+      ## Background
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut tellus vel orci porta
+    - |-
+      ## Solution
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut tellus vel orci porta
+    - |-
+      ## Results
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut tellus vel orci porta
+quotes:
+  - from: Jammie lannister, Brother
+    content: Jenkins has transformed our way of thinking to next level and we really admire that, thank you !
+    image: quote.webp
