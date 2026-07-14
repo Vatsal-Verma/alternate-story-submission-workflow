@@ -1,0 +1,14 @@
+title: another test
+post_name: another-test
+date: '2026-07-14T15:40:49.359Z'
+authored_by: jenkins
+metadata:
+  title: another test
+  organization: jenkins
+map:
+  authored_by: jenkins
+  location: jenkins
+body_content:
+  title: another test
+  paragraphs:
+    - '![image](https://www.jenkins.io/doc/book/resources/security/configure-global-security-agent-controller-toggle.png)'
