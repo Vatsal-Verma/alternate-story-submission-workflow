@@ -1,6 +1,6 @@
 title: test
 post_name: test
-date: '2026-07-14T08:50:54.803Z'
+date: '2026-07-14T08:54:10.277Z'
 authored_by: test
 image: story.png
 metadata:
@@ -13,3 +13,7 @@ body_content:
   title: test
   paragraphs:
     - test
+quotes:
+  - from: Jack smth
+    content: jenkins si good ahh
+    image: quote.png
