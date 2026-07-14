@@ -1,0 +1,19 @@
+title: asda
+post_name: asda
+date: '2026-07-14T14:38:16.414Z'
+authored_by: asdasd
+image: story.png
+metadata:
+  title: asda
+  organization: asdasd
+map:
+  authored_by: asdasd
+  location: asdasd
+body_content:
+  title: asda
+  paragraphs:
+    - something
+quotes:
+  - from: Something, asdasd
+    content: Jenkins is the way to get success
+    image: quote.png
