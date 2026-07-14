@@ -223,20 +223,6 @@ body:
       label: Quote Image
       description: Optional. Enter the uploaded filename after attaching the image to the issue.
 
-  - type: markdown
-    attributes:
-      value: |
-        ## Images
-
-        After submitting this issue, drag and drop any images into the issue description or a comment.
-
-        Suggested images:
-
-        - Story hero image
-        - Quote author image (optional)
-
-        Once uploaded, copy the filenames into the corresponding fields above.
-
   - type: checkboxes
     id: consent
     attributes:
