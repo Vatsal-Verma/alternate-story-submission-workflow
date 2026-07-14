@@ -92,7 +92,6 @@ body:
       label: Your Story
       description: |
         Write your story in Markdown.
-      render: markdown
       placeholder: |
         ## Background
 
