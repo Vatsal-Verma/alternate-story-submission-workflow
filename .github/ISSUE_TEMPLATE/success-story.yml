@@ -203,24 +203,32 @@ body:
         Drag & drop or paste an image here.
 
         GitHub will upload it automatically.
+    validations:
+      required: true
 
   - type: input
     id: quote_author
     attributes:
       label: Quote Author
       placeholder: Jane Doe, DevOps Lead
+    validations:
+      required: true
 
   - type: textarea
     id: quote
     attributes:
       label: Quote
       placeholder: Jenkins has transformed the way we deliver software.
+    validations:
+      required: true
 
   - type: textarea
     id: quote_image
     attributes:
       label: Quote Image
       description: Optional. Enter the uploaded filename after attaching the image to the issue.
+    validations:
+      required: true
 
   - type: checkboxes
     id: consent
