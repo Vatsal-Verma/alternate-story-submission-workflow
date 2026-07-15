@@ -77,6 +77,8 @@ body:
     attributes:
       label: Tag Line
       placeholder: One sentence describing your story.
+    validations:
+      required: true
 
   - type: textarea
     id: summary
