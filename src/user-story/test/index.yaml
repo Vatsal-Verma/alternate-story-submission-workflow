@@ -1,0 +1,20 @@
+title: test
+post_name: test
+date: '2026-07-20T07:21:27.911Z'
+authored_by: testtt
+tag_line: ahsudhasd
+image: story.png
+metadata:
+  title: test
+  organization: test
+map:
+  authored_by: testtt
+  location: ssad
+body_content:
+  title: test
+  paragraphs:
+    - asdasdas
+quotes:
+  - from: asdsad
+    content: asdadasd, asdasd
+    image: quote.png
