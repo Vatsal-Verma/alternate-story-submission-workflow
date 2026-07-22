@@ -3,7 +3,6 @@ name: Story Submission → Create PR
 on:
   issues:
     types:
-      - opened
       - labeled
 
 jobs:
