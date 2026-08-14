@@ -23,10 +23,7 @@ collections:
     extension: yaml
     format: yaml
     create: true
-
-    media_folder: ''
-    public_folder: ''
-
+    
     fields:
 
       - label: Title
