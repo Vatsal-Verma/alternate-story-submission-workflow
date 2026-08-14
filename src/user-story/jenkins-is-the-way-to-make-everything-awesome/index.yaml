@@ -1,0 +1,57 @@
+title: Jenkins has made our lives better
+post_name: jenkins is the way to make everything awesome
+authored_by: Vatsal Verma
+date: 2026-08-14T16:22:00.000+05:30
+tag_line: jenkins will make this world better by providing real ci cd
+image: galgotias.jpg
+metadata:
+  platforms:
+    - github
+  build_tools:
+    - maven
+    - gradle
+  organization: Jenkins
+  programming_languages:
+    - cpp
+    - java
+  title: Jenkins is amazing
+  company_website: https://github.com
+  community_supports:
+    - jenkins.io & community blogs
+  version_control_systems:
+    - github
+    - gitty
+  industries:
+    - cloud
+    - software
+quotes:
+  - from: Jamie lannister, CEO 7 kingdoms
+    content: "nothing "
+    image: redhat.png
+map:
+  authored_by: lanister
+  geojson: '{"type":"Point","coordinates":[79.4348037,20.8936351]}'
+body_content:
+  title: jenkins is something great
+  paragraphs:
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum
