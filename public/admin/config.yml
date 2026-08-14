@@ -16,8 +16,6 @@ collections:
     label: User Stories
     label_singular: User Story
 
-    # Existing repository structure:
-    # src/user-story/<post_name>/index.yaml
     folder: src/user-story
     path: '{{post_name}}/index'
     slug: 'index'
@@ -26,19 +24,10 @@ collections:
     format: yaml
     create: true
 
-    # Store images relative to each story.
-    # Example:
-    # src/user-story/my-story/
-    # ├── index.yaml
-    # └── story.png
     media_folder: ''
     public_folder: ''
 
     fields:
-
-      # ==================================================
-      # BASIC STORY INFORMATION
-      # ==================================================
 
       - label: Title
         name: title
@@ -74,10 +63,6 @@ collections:
         widget: image
         required: true
         choose_url: false
-
-      # ==================================================
-      # METADATA
-      # ==================================================
 
       - label: Metadata
         name: metadata
@@ -162,10 +147,6 @@ collections:
               name: community_support
               widget: string
 
-      # ==================================================
-      # TESTIMONIALS / QUOTES
-      # ==================================================
-
       - label: Testimonials
         name: quotes
         widget: list
@@ -190,10 +171,6 @@ collections:
             widget: image
             required: false
             choose_url: false
-
-      # ==================================================
-      # MAP DATA
-      # ==================================================
 
       - label: Map Data
         name: map
@@ -230,10 +207,6 @@ collections:
             decimals: 7
             required: false
 
-      # ==================================================
-      # STORY BODY
-      # ==================================================
-
       - label: Body
         name: body_content
         widget: object
@@ -257,4 +230,3 @@ collections:
               label: Paragraph
               name: paragraph
               widget: markdown
-              
