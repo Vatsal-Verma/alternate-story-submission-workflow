@@ -8,6 +8,7 @@ on:
 jobs:
   create-story-pr:
     if: >
+      github.repository == 'jenkins-infra/stories' &&
       github.event.label.name == 'story-submission'
 
     runs-on: ubuntu-latest

@@ -15,7 +15,9 @@
   "dependencies": {
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
+    "fuse.js": "^7.5.0",
     "js-yaml": "^4.2.0",
+    "leaflet": "^1.9.4",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router": "^6.30.1",
@@ -36,6 +38,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "prettier": "^3.8.4",
-    "vite": "^7.1.12"
+    "vite": "^7.1.12",
+    "vite-plugin-sitemap": "^0.8.2"
   }
 }
