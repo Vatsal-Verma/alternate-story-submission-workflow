@@ -1,0 +1,23 @@
+title: testing another user story submission
+post_name: jenkins-is-a-good-ci-cd-tool
+authored_by: "jenkins "
+date: 2026-08-19T17:17:25.447+05:30
+tag_line: Jenkins is great
+image: jenkins-world.png
+metadata:
+  title: jenkins is the greatest amongest all existing
+  organization: jenkins
+  project_website: https://jenkins.io
+  summary: jenkins
+quotes:
+  - from: great
+    content: greatest
+    image: ./jenkins_map_pin-180x180-1.png
+map:
+  authored_by: "jenkins "
+  location: India
+  geojson: '{"type":"Point","coordinates":[83.3906204,20.8957438]}'
+body_content:
+  title: jenkins is the way to hieghts
+  paragraphs:
+    - great !!
