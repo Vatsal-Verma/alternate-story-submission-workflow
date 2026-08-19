@@ -1,0 +1,32 @@
+title: Jenkins Is the way to get proper ci cd
+post_name: jenkins-is-great
+authored_by: jenkins
+date: 2026-08-19T16:32:05.459+05:30
+tag_line: jenkins
+image: hero.png
+metadata:
+  platforms:
+    - java
+  build_tools:
+    - java
+  organization: jenkins
+  programming_languages:
+    - cpp
+    - java
+  project_website: ""
+  team_members: []
+  title: jenkins
+  community_supports:
+    - java
+  version_control_systems:
+    - java
+  industries:
+    - jenkins
+map:
+  geojson: '{"type":"Point","coordinates":[80.015629,16.9054744]}'
+  authored_by: java
+  location: India
+body_content:
+  title: jenkins
+  paragraphs:
+    - body
