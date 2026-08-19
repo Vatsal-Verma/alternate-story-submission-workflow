@@ -161,12 +161,11 @@ collections:
               name: community_support
               widget: string
 
-      - label: Testimonials
-        name: quotes
+      - label: Testimonial
+        name: quote
         widget: object
         required: true
         collapsed: true
-        allow_add: true
 
         fields:
 
