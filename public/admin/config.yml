@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jenkins-infra/stories
+  repo: Vatsal-Verma/alternate-story-submission-workflow
   branch: main
   open_authoring: true
   squash_merges: true
