@@ -161,10 +161,10 @@ collections:
               name: community_support
               widget: string
 
-      - label: Testimonial
-        name: quote
-        widget: object
-        required: true
+      - label: Testimonials
+        name: quotes
+        widget: list
+        required: false
         collapsed: true
 
         fields:
