@@ -1,0 +1,25 @@
+title: testing 12
+post_name: "14"
+authored_by: "14"
+date: 2026-08-19T18:04:36.680+05:30
+tag_line: "14"
+image: jenkins-world.png
+metadata:
+  title: tesing
+  organization: jenkins
+  project_website: https://google.com
+  summary: ""
+quote:
+  from: test
+  content: jenkins
+  image: quote.png
+map:
+  authored_by: okay
+  location: India
+  industries:
+    - Software
+  geojson: '{"type":"Point","coordinates":[78.3984367,17.8449282]}'
+body_content:
+  title: Jenkins
+  paragraphs:
+    - okay
