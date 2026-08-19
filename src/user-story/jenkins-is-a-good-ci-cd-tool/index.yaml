@@ -12,7 +12,7 @@ metadata:
 quotes:
   - from: great
     content: greatest
-    image: jenkins_map_pin-180x180-1.png
+    image: ./jenkins_map_pin-180x180-1.png
 map:
   authored_by: "jenkins "
   location: India
