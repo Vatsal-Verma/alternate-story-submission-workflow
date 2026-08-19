@@ -8,6 +8,9 @@ backend:
 
 publish_mode: editorial_workflow
 
+media_folder: "public/media"
+public_folder: "/media"
+
 collections:
   - name: user-story
     label: User Stories
@@ -20,9 +23,6 @@ collections:
     extension: yaml
     format: yaml
     create: true
-
-    media_folder: ''
-    public_folder: ''
     
     fields:
 
