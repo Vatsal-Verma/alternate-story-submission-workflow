@@ -1,0 +1,24 @@
+title: "12"
+post_name: "12"
+authored_by: test
+date: 2026-08-19T17:54:53.292+05:30
+tag_line: test
+image: jenkins-world.png
+metadata:
+  title: test
+  organization: test
+  project_website: https://google.com
+quotes:
+  from: test
+  content: test
+  image: quote.png
+map:
+  authored_by: test
+  location: India
+  geojson: '{"type":"Point","coordinates":[77.5634165,21.1461886]}'
+  industries:
+    - techonology
+body_content:
+  title: Jenkins
+  paragraphs:
+    - bravo
